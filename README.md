@@ -3,7 +3,8 @@
 Voicecode overrides and customizations
 
 ```
-ln -s /Users/house/voicecode-settings/settings /Users/house/voicecode/settings
+cd ~/voicecode
+git clone git//voicecode-settings settings
 ```
 
 http://voicecode.io/
