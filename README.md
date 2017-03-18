@@ -4,7 +4,7 @@ Voicecode overrides and customizations
 
 ```
 cd ~/voicecode
-git clone git//voicecode-settings settings
+git clone git@github.com:house9/voicecode-settings.git settings
 ```
 
 http://voicecode.io/
