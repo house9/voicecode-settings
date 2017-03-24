@@ -1,10 +1,12 @@
 Settings.vocabulary =
   translations:
     "by bug": "byebug"
+    "death": "def"
     "environment": "env"
     "jason": "json"
     "lent": "lint"
     "nelly": "nil"
     "noel": "null"
-    "ruby spec": "rspec spec"
+    "p ram": "params"
     "temper": "tmp"
+    "work in progress": "WIP"
