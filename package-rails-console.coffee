@@ -53,3 +53,32 @@ localPackage.command 'ruby-spec',
       @string "bundle exec rspec spec/#{input}"
     else
       @string "bundle exec rspec spec/"
+
+localPackage.command 'rake',
+  spoken: 'pitchfork'
+  description: 'run rake'
+  enabled: true
+  oneArgument: true
+  action: (input) ->
+    # if input?
+    #   @string "bundle exec rake db:migrate"
+    # else
+    @string "bundle exec rake "
+
+# TODO: make this an override of: `snipline`, for iterm/terminal
+localPackage.command 'swift',
+  spoken: 'swift'
+  description: 'clear the current line in the console'
+  enabled: true
+  action: ->
+    @key 'e', 'control'
+    @key 'u', 'control'
+
+localPackage.command 'git-checkout-new-branch',
+  spoken: 'new branch'
+  description: 'create a new branch'
+  enabled: true
+  oneArgument: true
+  grammarType: 'textCapture'
+  action: (input) ->
+    @string "git checkout -b #{input}"
