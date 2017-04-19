@@ -58,12 +58,13 @@ localPackage.command 'rake',
   spoken: 'pitchfork'
   description: 'run rake'
   enabled: true
+  grammarType: 'textCapture'
   oneArgument: true
   action: (input) ->
-    # if input?
-    #   @string "bundle exec rake db:migrate"
-    # else
-    @string "bundle exec rake "
+    if input?
+      @string "bundle exec rake db:migrate db:test:prepare"
+    else
+      @string "bundle exec rake "
 
 # TODO: make this an override of: `snipline`, for iterm/terminal
 localPackage.command 'swift',
@@ -82,3 +83,10 @@ localPackage.command 'git-checkout-new-branch',
   grammarType: 'textCapture'
   action: (input) ->
     @string "git checkout -b #{input}"
+
+localPackage.command 'git-push-new-branch',
+  spoken: 'jet fresh'
+  description: 'push a new branch'
+  enabled: true
+  action: ->
+    @string 'git push -u origin HEAD'
