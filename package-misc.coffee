@@ -13,3 +13,10 @@ localPackage.command 'do-it',
   enabled: true
   action: ->
     @string "- [ ] "
+
+localPackage.command 'marco-polo',
+  spoken: 'marco polo'
+  description: 'find in project'
+  enabled: true
+  action: ->
+    @key 'f', ['command', 'shift']
