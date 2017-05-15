@@ -1,6 +1,6 @@
 localPackage = Packages.register
-  name: 'rails-console'
-  description: 'common things for on and around the rails console'
+  name: 'console-custom'
+  description: 'common things in console for rails development, etc...'
   platforms: [
     'darwin'
     'linux'
@@ -75,6 +75,7 @@ localPackage.command 'swift',
     @key 'e', 'control'
     @key 'u', 'control'
 
+# TODO: make this into something like `jet new branch`
 localPackage.command 'git-checkout-new-branch',
   spoken: 'new branch'
   description: 'create a new branch'
@@ -84,6 +85,7 @@ localPackage.command 'git-checkout-new-branch',
   action: (input) ->
     @string "git checkout -b #{input}"
 
+# TODO: make this an additional option to git (jet)
 localPackage.command 'git-push-new-branch',
   spoken: 'jet fresh'
   description: 'push a new branch'

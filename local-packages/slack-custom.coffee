@@ -1,6 +1,6 @@
 localPackage = Packages.register
   name: 'slack-custom'
-  description: 'common things for slack'
+  description: 'common shortcuts for slack'
   platforms: [
     'darwin'
     'linux'
