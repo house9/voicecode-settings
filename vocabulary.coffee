@@ -8,6 +8,8 @@ Settings.vocabulary =
     "cash": "cache"
     # rails/ruby
     "constant": "constants"
+    # html
+    "dave": "div"
     # rails/ruby
     "death": "def"
     # rails/ruby
@@ -34,3 +36,5 @@ Settings.vocabulary =
     "temper": "tmp"
     # commit messages, etc...
     "work in progress": "WIP"
+    # temporary (scope to terminals)
+    "pseudo-": "sudo "
