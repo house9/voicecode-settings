@@ -27,3 +27,10 @@ localPackage.command 'copy-less',
   enabled: true
   action: ->
     @key 'v', ['command', 'shift']
+
+localPackage.command 'delete-symmetrical',
+  spoken: 'slurp'
+  enabled: true
+  action: ->
+    @do 'common:delete'
+    @do 'common:forward-delete'
