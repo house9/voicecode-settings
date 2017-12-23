@@ -1,3 +1,13 @@
+# updates to Settings.vocabulary.vocabulary seem to require re-importing into Dragon (Edit Vocabulary)
+Settings.vocabulary =
+  vocabulary: [
+    "error"
+    "fact"
+    "key"
+    "prestep"
+    "requeue"
+  ]
+
 Settings.vocabulary =
   translations:
     # rails/ruby
@@ -14,8 +24,16 @@ Settings.vocabulary =
     "death": "def"
     # rails/ruby
     "endo": "end"
-    # rails/ruby
-    "environment": "env"
+    # faker gem
+    "fakir": "faker"
+    # vocab
+    "fitch": "fetch"
+    # TODO: shell hack, make a command
+    "grab grab": " | grep "
+    # day-to-day
+    "waddle": "hl7"
+    # testing
+    # "gopher": "gulp"
     # rails/ruby
     "jim": "gem"
     # js, etc...
@@ -29,12 +47,22 @@ Settings.vocabulary =
     # js, etc
     "noel": "null"
     # rails/ruby
-    "p ram": "params"
+    "our spec": "rspec"
+    # x
+    "q": "queue"
+    # postgres
+    "post database": "postgres"
+    # ramda
+    "rhonda": "ramda"
+    # erb /ruby
+    "ruby template": "erb"
     # company name
     "company company": "syncordia"
-    # shell
-    "temper": "tmp"
+    # vocab
+    "line q": "queue"
     # commit messages, etc...
     "work in progress": "WIP"
     # temporary (scope to terminals)
     "pseudo-": "sudo "
+    # cannot pronounce `key`
+    "teatime": "key"
