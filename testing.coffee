@@ -6,13 +6,13 @@ localPackage = Packages.register
     'linux'
     'windows'
   ]
-  # applications: [
-  #   'com.googlecode.iterm2',
-  #   'com.apple.Terminal'
-  # ]
+  applications: [
+    'com.googlecode.iterm2',
+    'com.apple.Terminal'
+  ]
 
-# localPackage.command 'type-abc',
-#   spoken: 'casper'
-#   enabled: false
-#   action: ->
-#     @string 'abc '
+localPackage.command 'type-abc',
+  spoken: 'casper'
+  enabled: false
+  action: ->
+    @string 'abc '
