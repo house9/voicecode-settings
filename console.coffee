@@ -31,6 +31,40 @@ localPackage.command 'open-atom',
     @string 'atom .'
     @key 'enter'
 
+localPackage.command 'open-sublime',
+  spoken: 'sublime'
+  description: 'open sublime from the current directory'
+  enabled: true
+  action: ->
+    @string 'sublime .'
+    @key 'enter'
+
+localPackage.command 'ruby-manager',
+  spoken: 'ruby manager'
+  description: 'run rvm'
+  enabled: true
+  grammarType: 'textCapture'
+  oneArgument: true
+  action: (input) ->
+    if input?
+      @string "rvm #{input}"
+      @key 'enter'
+    else
+      @string 'rvm '
+
+localPackage.command 'rails',
+  spoken: 'rails'
+  description: 'run rails with bundle exec'
+  enabled: true
+  grammarType: 'textCapture'
+  oneArgument: true
+  action: (input) ->
+    if input?
+      @string "bundle exec rails #{input}"
+      @key 'enter'
+    else
+      @string 'bundle exec rails '
+
 localPackage.command 'ruby-lint',
   spoken: 'ruby check'
   description: 'run robocop'
@@ -65,6 +99,14 @@ localPackage.command 'rake',
       @string "bundle exec rake db:migrate db:test:prepare"
     else
       @string "bundle exec rake "
+
+localPackage.command 'rake+enter',
+  spoken: 'pitch rock'
+  description: 'run rake then enter'
+  enabled: true
+  action: ->
+    @string 'bundle exec rake '
+    @key 'enter'
 
 # TODO: make this an override of: `snipline`, for iterm/terminal
 localPackage.command 'swift',
